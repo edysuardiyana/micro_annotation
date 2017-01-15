@@ -33,7 +33,7 @@ def micro_annotate_search(sourceFile):
     output = []
     quemican = deque
     ARRAY_TUPLED = namedtuple('ARRAY_TUPLED', 'AXC AYC AZC GXC GYC GZC AVMC GVMC'
-                                 ' AXT AYT AZT GXT GYT GZT AVMT GVMT DUMMY ANNOT') #change this for OJ's data, add one element before ANNOT
+                                 ' AXT AYT AZT GXT GYT GZT AVMT GVMT ANNOT') 
 
     print('start to re-annotate')
     print('Please waiting! ....')
@@ -89,17 +89,3 @@ def micro_annotate(sourceFile, dest_file):
         csvWriter.writerow(finout)
 
     outF.close()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
