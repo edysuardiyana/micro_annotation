@@ -9,13 +9,7 @@ import source_var
 def main():
 
      ##this is the main program to pre-processing and generating the data for WEKA classifier##
-
     # properties for scaling process
-    names = ["subject_1","subject_2","subject_3","subject_4","subject_5","subject_6","subject_7","subject_8","subject_9",
-             "subject_10","subject_12","subject_13","subject_14","subject_15","subject_16","subject_17",
-             "subject_19","subject_20","subject_21","subject_22","subject_24","subject_25","subject_26","subject_28",
-             "subject_29","subject_31"]
-
     for i in range(3):
         for name in names:
 
@@ -45,6 +39,19 @@ def main():
             microannotate_right.micro_annotate(source_file_micro, dest_file_micro) # re-annotate the raw data using micro-annotate
             activefeat.active_feat(source_file_active,dest_file_active) # check the active state
             weka_file.featCalc(source_weka,source_features,weka_dest, dest_runtime_file) # calculate features and create the weka file
+
+def read_name():
+    name_list = []
+    path = source_var.listname_path()
+
+    with open(path) as obj_name:
+        for line in obj_name:
+            raw = line.split()
+            name = raw[0]
+            name_list.append(name)
+
+    return name_list
+
 
 if __name__ == '__main__':
     main()

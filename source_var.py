@@ -16,14 +16,13 @@ def configParser(section):
             dict1[option] = None
     return dict1
 
+def listname_path():
+    path = configParser("SectionOne")['list_name']
+    return path
+
 def sampling_rate():
     samp_rate = int(configParser("SectionOne")['sampling_rate'])
     return samp_rate
-
-def source_var():
-    name = configParser("SectionOne")['name']
-    #name = "dawan"
-    return name
 
 def init_val():
     in_val = int(configParser("SectionOne")['initval'])
@@ -89,4 +88,3 @@ def source_runtime(name):
     path = configParser("SectionOne")['source_path_runtime']
     runtime = path + name + '.csv'
     return runtime
-
