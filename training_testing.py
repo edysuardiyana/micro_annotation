@@ -46,7 +46,7 @@ def train_test(list_name):
             if name == sub_name:
                 testing_set, class_testing= read_file(sub_name)
             else:
-                training_set, class_training, annot_training = read_file(sub_name)
+                training_set, class_training = read_file(sub_name)
                 for i in range(len(training_set)):
                     total_training_set.append(training_set[i])
                     total_class_training.append(class_training[i])
@@ -76,6 +76,7 @@ def train_test(list_name):
 
 
 def calc_metrics(prediction_val, class_testing):
+    print prediction_val
     TP = 0
     FP = 0
     TN = 0
@@ -101,6 +102,8 @@ def calc_metrics(prediction_val, class_testing):
 
 def accuracy_check(final_detec_flag, annot):
     result = 0
+    if final_detec_flag == 1:
+        print "ini satu"
     if annot == 1 and final_detec_flag == 1:
         #true positive
         result = 1
@@ -117,7 +120,7 @@ def accuracy_check(final_detec_flag, annot):
 
 
 def read_file(name):
-    path = src.source_path_features()
+    path = src.source_path_features(name)
 
     data = []
     class_flag = []
