@@ -34,9 +34,9 @@ def main():
 
 
         #scale_file.scale_file(sourceFile, destFile, initcut, endcut) # scale the output from accelerometer, command this for OJ's scaled data
-        #microannotate_right.micro_annotate(source_file_micro, dest_file_micro) # re-annotate the raw data using micro-annotate
-        #activefeat.active_feat(source_file_active,dest_file_active) # check the active state
-        #weka_file.featCalc(active_path,source_features, dest_runtime_file) # calculate features and create the weka file
+        microannotate_right.micro_annotate(source_file_micro, dest_file_micro) # re-annotate the raw data using micro-annotate
+        activefeat.active_feat(source_file_active,dest_file_active) # check the active state
+        weka_file.featCalc(active_path,source_features, dest_runtime_file) # calculate features and create the weka file
 
     result = tt.train_test(names)
     write_result(result)
