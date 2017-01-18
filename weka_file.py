@@ -7,7 +7,7 @@ import writeWeka
 import source_var
 import threshold_function
 
-def featCalc(sourceFile,sourceFeatures,wekadest, dest_runtime):
+def featCalc(sourceFile,sourceFeatures, dest_runtime):
 
 
     chestData =[]
@@ -42,13 +42,6 @@ def featCalc(sourceFile,sourceFeatures,wekadest, dest_runtime):
             #######################################################################################################
 
     threshold_function.threshold_function(chestList,sourceFeatures, dest_runtime)
-    writeWeka.writeWeka(sourceFeatures,wekadest)
+    #writeWeka.writeWeka(sourceFeatures,wekadest)
 
     print("Finish")
-
-
-
-
-
-
-

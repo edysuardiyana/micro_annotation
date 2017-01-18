@@ -5,7 +5,7 @@ from collections import namedtuple
 
 
 ARRAY_TUPLED = namedtuple('ARRAY_TUPLED', 'AXC AYC AZC GXC GYC GZC AVMC GVMC'
-                                 ' AXT AYT AZT GXT GYT GZT AVMT GVMT DUMMY ANNOT') #change for OJ's result, add one element before ANNOT
+                                 ' AXT AYT AZT GXT GYT GZT AVMT GVMT ANNOT') #change for OJ's result, add one element before ANNOT
 def reanotright(raw_data):
 
     arrdata=[]
